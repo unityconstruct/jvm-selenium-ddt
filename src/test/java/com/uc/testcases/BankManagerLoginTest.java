@@ -16,13 +16,17 @@ public class BankManagerLoginTest extends TestBase {
 		log.debug("Inside Login Test");
 		
 		//Act
-		driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
-		//Thread.sleep(3000);
+		//driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
+		
+		click("bmlBtn");
+		
+		Thread.sleep(3000);
 		
 		//Assert
 		Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("addCustBtn"))),"Login not successful");
+		
 		log.debug("Login succesfully executed");
-		Assert.assertTrue(false);
+		//Assert.assertTrue(false);
 	}
 	
 

@@ -19,14 +19,21 @@ public class AddCustomerTest extends TestBase {
 		//Arrange
 		
 		//Act
-		driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
-		driver.findElement(By.cssSelector(OR.getProperty("firstname"))).sendKeys(firstName);
-		driver.findElement(By.cssSelector(OR.getProperty("lastname"))).sendKeys(lastName);
-		driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(postCode);
-		driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
-		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+//		using the TestBase class methods for interacting with objects
+//		driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
+//		driver.findElement(By.cssSelector(OR.getProperty("firstname"))).sendKeys(firstName);
+//		driver.findElement(By.cssSelector(OR.getProperty("lastname"))).sendKeys(lastName);
+//		driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(postCode);
+//		driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
+		
+		click("addCustBtn");
+		type("firstname",firstName);
+		type("lastname", lastName);
+		type("postcode", postCode);
+		click("addBtn");
 		
 		//Assert
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		Assert.assertTrue(alert.getText().contains(alerttext));
 		alert.accept();
 		//Assert.assertTrue(false);
