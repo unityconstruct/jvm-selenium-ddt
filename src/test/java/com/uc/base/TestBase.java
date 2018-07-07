@@ -93,8 +93,6 @@ public class TestBase {
 				//System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE,"false");
 				System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE,"C:\\temp\\selenium.log");
 				
-				
-				
 				driver = new FirefoxDriver();
 				System.out.println("Firefox: " + System.getProperty("webdriver.gecko.driver"));
 				log.debug("Firefox launched!");

@@ -16,8 +16,9 @@ public class AddCustomerTest extends TestBase {
 
 	@Test(dataProvider="getData")
 	public void addCustomer(String firstName, String lastName, String postCode, String alerttext) throws InterruptedException {
-		//
+		//Arrange
 		
+		//Act
 		driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
 		driver.findElement(By.cssSelector(OR.getProperty("firstname"))).sendKeys(firstName);
 		driver.findElement(By.cssSelector(OR.getProperty("lastname"))).sendKeys(lastName);
@@ -25,9 +26,9 @@ public class AddCustomerTest extends TestBase {
 		driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		
+		//Assert
 		Assert.assertTrue(alert.getText().contains(alerttext));
 		alert.accept();
-		
 	}
 	
 	@DataProvider
@@ -50,14 +51,14 @@ public class AddCustomerTest extends TestBase {
 				data[rowNum-2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
 			}
 		}
-		
-//      manual assignment of the data		
-//		Object[][] data = new Object[rows-1][3];
-//		data[0][0] = excel.getCellData(sheetName, 0, 2);
-//		data[0][1] = excel.getCellData(sheetName, 1, 2);
-//		data[0][2] = excel.getCellData(sheetName, 2, 2);
-//		System.out.println(data.toString());
-		
 		return data;
 	}
 }
+
+
+//manual assignment of the data		
+//Object[][] data = new Object[rows-1][3];
+//data[0][0] = excel.getCellData(sheetName, 0, 2);
+//data[0][1] = excel.getCellData(sheetName, 1, 2);
+//data[0][2] = excel.getCellData(sheetName, 2, 2);
+//System.out.println(data.toString());

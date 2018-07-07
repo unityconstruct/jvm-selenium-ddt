@@ -1,8 +1,7 @@
-07/07/2018 08:57:25 devpinoyLogger Begin setup()
-07/07/2018 08:57:26 devpinoyLogger Config file loaded
-07/07/2018 08:57:26 devpinoyLogger Config file loaded
-07/07/2018 08:57:29 devpinoyLogger Chrome launched!
-07/07/2018 08:57:31 devpinoyLogger Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
-07/07/2018 08:57:32 devpinoyLogger Inside Login Test
-07/07/2018 08:57:33 devpinoyLogger Inside succesfully executed
-07/07/2018 08:57:37 devpinoyLogger Test execution completed
+07/07/2018 16:15:33 devpinoyLogger Begin setup()
+07/07/2018 16:15:34 devpinoyLogger Config file loaded
+07/07/2018 16:15:34 devpinoyLogger Config file loaded
+07/07/2018 16:15:37 devpinoyLogger Chrome launched!
+07/07/2018 16:15:39 devpinoyLogger Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
+07/07/2018 16:15:41 devpinoyLogger Inside Login Test
+07/07/2018 16:15:46 devpinoyLogger Test execution completed
