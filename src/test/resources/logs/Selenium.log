@@ -1,8 +1,8 @@
-04:22:18,123 DEBUG devpinoyLogger:52 - Begin setup()
-04:22:18,126 DEBUG devpinoyLogger:64 - Config file loaded
-04:22:18,126 DEBUG devpinoyLogger:77 - Config file loaded
-04:22:21,013 DEBUG devpinoyLogger:93 - Chrome launched!
-04:22:22,742 DEBUG devpinoyLogger:103 - Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
-04:22:24,148 DEBUG devpinoyLogger:12 - Inside Login Test
-04:22:24,237 DEBUG devpinoyLogger:15 - Inside succesfully executed
-04:22:24,839 DEBUG devpinoyLogger:117 - Test execution completed
+06:30:18,434 DEBUG devpinoyLogger:43 - Begin setup()
+06:30:18,438 DEBUG devpinoyLogger:55 - Config file loaded
+06:30:18,438 DEBUG devpinoyLogger:68 - Config file loaded
+06:30:21,363 DEBUG devpinoyLogger:92 - Chrome launched!
+06:30:23,152 DEBUG devpinoyLogger:102 - Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
+06:30:24,568 DEBUG devpinoyLogger:15 - Inside Login Test
+06:30:24,986 DEBUG devpinoyLogger:23 - Inside succesfully executed
+06:30:25,573 DEBUG devpinoyLogger:116 - Test execution completed

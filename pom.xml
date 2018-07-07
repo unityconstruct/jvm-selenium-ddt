@@ -6,8 +6,8 @@
 	<artifactId>DataDrivenFramework</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
-		<jre.level>1.8</jre.level>
 		<jdk.level>1.8</jdk.level>
+		<jre.level>1.8</jre.level>
 		<junit.jupiter.version>5.2.0</junit.jupiter.version>
 		<junit.platform.version>1.2.0</junit.platform.version>
 	</properties>
