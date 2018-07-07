@@ -69,14 +69,18 @@
 					</execution>
 				</executions>
 			</plugin>
+
+
 			<!-- Below plug-in is used to TestNG execute tests -->
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.18.1</version>
 				<configuration>
 					<forkCount>0</forkCount>
+					<testFailureIgnore>false</testFailureIgnore>
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+						<!-- suiteXmlFile>testng.xml</suiteXmlFile-->
+						<suiteXmlFile>src/test/resources/runner/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 					<properties>
@@ -87,6 +91,8 @@
 					</properties>
 				</configuration>
 			</plugin>
+
+
 			<!-- Javadoc Generation -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -104,6 +110,8 @@
 
 	<!-- Include the following dependencies -->
 	<dependencies>
+		<!-- ///////////////////////////////////////// -->
+
 
 		<!-- com.relevantcodes/extentreports -->
 		<!-- http://repo1.maven.org/maven2/com/relevantcodes/extentreports/2.41.2/ -->
@@ -114,6 +122,65 @@
 		</dependency>
 
 
+<!-- ///////////////////////////////////////// -->
+
+		<!-- mysql connector -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>6.0.5</version>
+		</dependency>
+
+
+<!-- ///////////////////////////////////////// -->
+
+
+		<!-- https://mvnrepository.com/artifact/org.uncommons/reportng -->
+		<dependency>
+			<groupId>org.uncommons</groupId>
+			<artifactId>reportng</artifactId>
+			<version>1.1.4</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.google.inject/guice -->
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>4.1.0</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+
+
+		<!-- ///////////////////////////////////////// -->
+
+
+		<!-- Dependency for POI API -->
+		<!-- http://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.6</version>
+		</dependency>
+
+		<!-- http://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.6</version>
+		</dependency>
+		<!-- http://mvnrepository.com/artifact/dom4j/dom4j -->
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>1.1</version>
+		</dependency>
+
 		<!-- xmlbeans -->
 		<!-- http://repo1.maven.org/maven2/com/relevantcodes/extentreports/2.41.2/ -->
 		<dependency>
@@ -121,13 +188,25 @@
 			<artifactId>xmlbeans</artifactId>
 			<version>2.3.0</version>
 		</dependency>
-		
-		<!-- mysql connector -->
+
+
+		<!-- Apache POI -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>6.0.5</version>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.6</version>
 		</dependency>
+		<!-- http://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>3.6</version>
+		</dependency>
+
+
+
+
+		<!-- ///////////////////////////////////////// -->
 
 
 
@@ -140,7 +219,7 @@
 		<!-- Selenium from Cucumber project <dependency> <groupId>org.seleniumhq.selenium</groupId> 
 			<artifactId>selenium-java</artifactId> <version>3.5.3</version> </dependency> -->
 
-
+		<!-- ///////////////////////////////////////// -->
 
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -148,6 +227,8 @@
 			<version>6.9.9</version>
 		</dependency>
 
+
+		<!-- ///////////////////////////////////////// -->
 		<!-- log4j OLD <dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId> 
 			<version>1.2.17</version> </dependency> -->
 		<!-- log4j2 NEW -->
@@ -163,21 +244,26 @@
 		</dependency>
 		<!-- log4j2 NEW -->
 
-		<!-- Apache POI -->
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.17</version>
-		</dependency>
+
+
+		<!-- ///////////////////////////////////////// -->
+
+
 
 		<!-- Junit version? -->
 		<!-- <dependency> <groupId>org.junit.jupiter</groupId> <artifactId>junit-jupiter-engine</artifactId> 
 			<version>${junit.jupiter.version}</version> <scope>test</scope> </dependency> -->
 
+		<!-- Junit 4.12 -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>
 
 
-
-
+		<!-- ///////////////////////////////////////// -->
 		<!-- Cucumber java -->
 		<dependency>
 			<groupId>info.cukes</groupId>
@@ -246,15 +332,9 @@
 			<version>1.2.5</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- ///////////////////////////////////////// -->
 
 
-		<!-- Junit 4.12 -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
 
 
 
