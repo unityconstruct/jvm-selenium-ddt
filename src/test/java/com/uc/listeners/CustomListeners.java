@@ -44,7 +44,7 @@ public class CustomListeners implements ITestListener 	{
 		//Show image link & image
 		Reporter.log("Capturing Screenshot");
 		Reporter.log("<a target=\"_blank\" href=\"" + TestUtil.screenshotName +"\">Screenshot</a><br/>");
-		Reporter.log("<img height=\"50%\" width=\"50%\" src=\""+TestUtil.screenshotName +"\"/>");
+		Reporter.log("<a href=\""+TestUtil.screenshotName+"\"><img height=\"50%\" width=\"50%\" src=\""+TestUtil.screenshotName +"\"/></a>");
 	}
 
 	@Override

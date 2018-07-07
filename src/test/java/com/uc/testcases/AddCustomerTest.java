@@ -29,6 +29,7 @@ public class AddCustomerTest extends TestBase {
 		//Assert
 		Assert.assertTrue(alert.getText().contains(alerttext));
 		alert.accept();
+		Assert.assertTrue(false);
 	}
 	
 	@DataProvider
