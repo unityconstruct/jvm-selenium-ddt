@@ -11,7 +11,7 @@ public class LoginTest extends TestBase {
 	public void loginAsBankManager() throws InterruptedException {
 		log.debug("Inside Login Test");
 		driver.findElement(By.cssSelector(OR.getProperty("bmlBtn"))).click();
-		Thread.sleep(10000);
+		//Thread.sleep(3000);
 		log.debug("Inside succesfully executed");
 	}
 }

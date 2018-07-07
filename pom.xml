@@ -97,7 +97,7 @@
 					<properties>
 						<property>
 							<name>testnames</name>
-							<value>"Simple Test</value>
+							<value>"Simple Test"</value>
 						</property>
 					</properties>
 				</configuration>
