@@ -7,6 +7,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -15,7 +16,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import com.uc.utilities.ExcelReader;
+import com.uc.utilities.ExtentManager;
 
 public class TestBase {
 	/*
@@ -39,7 +44,8 @@ public class TestBase {
 	//public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xls");
 	public static ExcelReader excel;
 	public static WebDriverWait wait;
-	
+	public ExtentReports rep = ExtentManager.getInstance();
+	public static ExtentTest test; //define logs inside defined Extent Test cases
 
 	// called before tests
 	@BeforeSuite
@@ -127,5 +133,25 @@ public class TestBase {
 			driver.quit();
 		}
 		log.debug("Test execution completed");
+	}
+	
+	public void click(String locator) {
+		driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+		test.log(LogStatus.INFO, "Clicking on " + locator);
+	}
+	
+	public void type(String locator, String value) {
+		driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+		test.log(LogStatus.INFO, "Typing into " + locator + "as value: " + value);
+	}
+	
+	
+	public boolean isElementPresent(By by) {
+		try {
+			driver.findElement(by);
+			return true;
+		} catch (Exception e) {
+			return false;
+		}
 	}
 }

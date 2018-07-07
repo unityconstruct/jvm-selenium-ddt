@@ -1,8 +1,18 @@
-17:03:39,685 DEBUG devpinoyLogger:47 - Begin setup()
-17:03:40,336 DEBUG devpinoyLogger:69 - Config file loaded
-17:03:40,337 DEBUG devpinoyLogger:82 - Config file loaded
-17:03:43,176 DEBUG devpinoyLogger:104 - Chrome launched!
-17:03:44,955 DEBUG devpinoyLogger:114 - Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
-17:03:46,464 DEBUG devpinoyLogger:16 - Inside Login Test
-17:03:46,864 DEBUG devpinoyLogger:24 - Login succesfully executed
-17:03:55,087 DEBUG devpinoyLogger:129 - Test execution completed
+17:50:33,052 DEBUG devpinoyLogger:51 - Begin setup()
+17:50:33,593 DEBUG devpinoyLogger:73 - Config file loaded
+17:50:33,593 DEBUG devpinoyLogger:86 - Config file loaded
+17:50:36,431 DEBUG devpinoyLogger:108 - Chrome launched!
+17:50:38,191 DEBUG devpinoyLogger:118 - Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
+17:50:39,607 DEBUG devpinoyLogger:16 - Inside Login Test
+17:50:40,015 DEBUG devpinoyLogger:24 - Login succesfully executed
+17:50:43,632 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+17:50:43,634 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+17:50:43,635 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+17:50:43,636 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+17:50:43,637 DEBUG cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SiloSix/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+17:50:44,636 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+17:50:44,637 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+17:50:44,637 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+17:50:44,638 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+17:50:44,639 DEBUG cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SiloSix/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+17:50:45,275 DEBUG devpinoyLogger:133 - Test execution completed

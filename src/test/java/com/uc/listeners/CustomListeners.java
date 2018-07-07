@@ -7,25 +7,31 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 
+import com.relevantcodes.extentreports.LogStatus;
+import com.uc.base.TestBase;
 import com.uc.utilities.TestUtil;
 
-public class CustomListeners implements ITestListener 	{
+//adding TestBase features
+public class CustomListeners extends TestBase implements ITestListener 	{
 
 	@Override
-	public void onTestStart(ITestResult result) {
-		// TODO Auto-generated method stub
-		
+	public void onTestStart(ITestResult arg0) {
+		test = rep.startTest(arg0.getName().toUpperCase());
 	}
  
 	@Override
-	public void onTestSuccess(ITestResult result) {
-		// TODO Auto-generated method stub
+	public void onTestSuccess(ITestResult arg0) {
+		//get the passed test case name from TestBase.test for the message
+		TestBase.test.log(LogStatus.PASS, arg0.getName().toUpperCase() +": PASS");
+		// end the test
+		rep.endTest(test);
+		//flush the reports to disk
+		rep.flush();
 		
 	}
 
 	@Override
-	public void onTestFailure(ITestResult result) {
-		// TODO Auto-generated method stub
+	public void onTestFailure(ITestResult arg0) {
 		// for hyperlinks in testng reports
 		System.setProperty("org.uncommons.reportng.escape-output","false");
 		try {
@@ -40,6 +46,11 @@ public class CustomListeners implements ITestListener 	{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		//on failure log the failure to extent, then pass on the throwed exception
+		test.log(LogStatus.FAIL, arg0.getName().toUpperCase()+" Failed with exception : " + arg0.getThrowable());
+		test.log(LogStatus.FAIL, test.addScreenCapture(TestUtil.screenshotName));
+		rep.endTest(test);
+		rep.flush();
 		
 		//Show image link & image
 		Reporter.log("Capturing Screenshot");

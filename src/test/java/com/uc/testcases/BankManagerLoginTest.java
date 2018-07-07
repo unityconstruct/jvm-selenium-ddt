@@ -25,12 +25,5 @@ public class BankManagerLoginTest extends TestBase {
 		Assert.assertTrue(false);
 	}
 	
-	public boolean isElementPresent(By by) {
-		try {
-			driver.findElement(by);
-			return true;
-		} catch (Exception e) {
-			return false;
-		}
-	}
+
 }
