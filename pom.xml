@@ -13,7 +13,7 @@
 	</properties>
 	<build>
 
-		<!-- sourceDirectory>src</sourceDirectory-->
+		<!-- sourceDirectory>src</sourceDirectory -->
 
 		<pluginManagement>
 			<plugins>
@@ -69,7 +69,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!-- Below plug-in is used to execute tests -->
+			<!-- Below plug-in is used to TestNG execute tests -->
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.18.1</version>
@@ -104,16 +104,33 @@
 
 	<!-- Include the following dependencies -->
 	<dependencies>
-	
-	<!--  com.relevantcodes/extentreports -->
-	<!-- http://repo1.maven.org/maven2/com/relevantcodes/extentreports/2.41.2/ -->
-	<dependency>
-    <groupId>com.relevantcodes</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>2.41.2</version>
-</dependency>
-	
-	
+
+		<!-- com.relevantcodes/extentreports -->
+		<!-- http://repo1.maven.org/maven2/com/relevantcodes/extentreports/2.41.2/ -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>2.41.2</version>
+		</dependency>
+
+
+		<!-- xmlbeans -->
+		<!-- http://repo1.maven.org/maven2/com/relevantcodes/extentreports/2.41.2/ -->
+		<dependency>
+			<groupId>org.apache.xmlbeans</groupId>
+			<artifactId>xmlbeans</artifactId>
+			<version>2.3.0</version>
+		</dependency>
+		
+		<!-- mysql connector -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>6.0.5</version>
+		</dependency>
+
+
+
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
@@ -152,8 +169,8 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.17</version>
 		</dependency>
-		
-		<!--  Junit version? -->
+
+		<!-- Junit version? -->
 		<!-- <dependency> <groupId>org.junit.jupiter</groupId> <artifactId>junit-jupiter-engine</artifactId> 
 			<version>${junit.jupiter.version}</version> <scope>test</scope> </dependency> -->
 
@@ -231,7 +248,7 @@
 		</dependency>
 
 
-		<!--  Junit 4.12 -->
+		<!-- Junit 4.12 -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
