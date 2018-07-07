@@ -15,6 +15,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.uc.utilities.ExcelReader;
+
 public class TestBase {
 	/*
 	 * Initialize
@@ -33,14 +35,24 @@ public class TestBase {
 	public static Properties config = new Properties();
 	public static Properties OR = new Properties();
 	public static FileInputStream fis;
-	
-
 	public static Logger log = Logger.getLogger("devpinoyLogger");// standard name for the logger
+	//public static ExcelReader excel = new ExcelReader(System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xls");
+	public static ExcelReader excel;
 
 	// called before tests
 	@BeforeSuite
 	public void setUp() {
 		log.debug("Begin setup()");
+		
+		
+		try {
+			excel = new ExcelReader(System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xlsx");
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		
 		if (driver == null) {
 
 			try {
