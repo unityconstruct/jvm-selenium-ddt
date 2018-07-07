@@ -1,0 +1,16 @@
+{
+	"capabilities": {
+		"alwaysMatch": {
+			"moz:firefoxOptions": {
+				"binary": "/usr/local/firefox/bin/firefox",
+				"args": ["-headless", "-profile", "/path/to/my/profile"],
+				"prefs": {
+					"dom.ipc.processCount": 8
+				},
+				"log": {
+					"level": "trace"
+				}
+			}
+		}
+	}
+}
