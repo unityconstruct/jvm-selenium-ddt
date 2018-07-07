@@ -13,6 +13,17 @@
 	</properties>
 	<build>
 
+<!-- log4j resource config -->
+		<testResources>
+      <testResource>
+        <directory>src/test/resources/properties</directory>
+        <includes>
+          <include>log4j.properties</include>
+        </includes>
+      </testResource>
+    </testResources>
+    
+    
 		<!-- sourceDirectory>src</sourceDirectory -->
 
 		<pluginManagement>
@@ -229,9 +240,16 @@
 
 
 		<!-- ///////////////////////////////////////// -->
-		<!-- log4j OLD <dependency> <groupId>log4j</groupId> <artifactId>log4j</artifactId> 
-			<version>1.2.17</version> </dependency> -->
-		<!-- log4j2 NEW -->
+		<!-- log4j OLD -->
+		<dependency> 
+		<groupId>log4j</groupId> 
+		<artifactId>log4j</artifactId> 
+		<version>1.2.17</version> 
+		</dependency> 
+
+
+		<!--  downgrading from 2.11.0 not wired up for this project -->
+		<!-- log4j2 NEW 
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
@@ -242,10 +260,8 @@
 			<artifactId>log4j-core</artifactId>
 			<version>2.11.0</version>
 		</dependency>
+		-->
 		<!-- log4j2 NEW -->
-
-
-
 		<!-- ///////////////////////////////////////// -->
 
 

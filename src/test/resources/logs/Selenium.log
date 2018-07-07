@@ -1,0 +1,7 @@
+02:46:25,414 DEBUG devpinoyLogger:47 - Begin setup()
+02:46:25,418 DEBUG devpinoyLogger:58 - Config file loaded
+02:46:25,418 DEBUG devpinoyLogger:70 - Config file loaded
+02:46:28,385 DEBUG devpinoyLogger:84 - Chrome launched!
+02:46:31,568 DEBUG devpinoyLogger:12 - Inside Login Test
+02:46:41,656 DEBUG devpinoyLogger:15 - Inside succesfully executed
+02:46:42,259 DEBUG devpinoyLogger:107 - Test execution completed
