@@ -157,7 +157,7 @@ public class TestBase {
 		} else if ( locator.endsWith("_ID")) {
 			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
 		}
-		test.log(LogStatus.INFO, "Typing into " + locator + "as value: " + value);
+		test.log(LogStatus.INFO, "Typing into " + locator + " as value: " + value);
 	}
 	
 	

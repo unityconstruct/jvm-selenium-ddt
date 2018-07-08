@@ -9,12 +9,15 @@ import org.testng.annotations.Test;
 
 import com.uc.base.TestBase;
 import com.uc.utilities.ExcelReader;
+import com.uc.utilities.TestUtil;
 
 
 
 public class AddCustomerTest extends TestBase {
 
-	@Test(dataProvider="getData")
+	//swap out for common data provider
+	//@Test(dataProvider="getData")
+	@Test(dataProviderClass=TestUtil.class, dataProvider="dp")
 	public void addCustomer(String firstName, String lastName, String postCode, String alerttext) throws InterruptedException {
 		//Arrange
 		
@@ -39,28 +42,31 @@ public class AddCustomerTest extends TestBase {
 		//Assert.assertTrue(false);
 	}
 	
-	@DataProvider
-	public Object[][] getData(){
-		//TODO: creat enum for the sheet to use the ordinals
-		String sheetName="AddCustomerTest";
-		//int rows = excel.getRowCount(sheetName);
-		int rows = 2;
-		
-		//int cols = excel.getColumnCount(sheetName);
-		int cols = 4;
-		
-		System.out.println("worksheet rows/cols" + rows +"+"+cols);
-		
-		Object[][] data = new Object[rows-1][cols];
-		
-		//data[0][0] - since data is on row2... decrement by 2 to place at [0] in the array
-		for(int rowNum=2;rowNum<=rows;rowNum++) { //2
-			for(int colNum =0; colNum < cols; colNum++) {
-				data[rowNum-2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
-			}
-		}
-		return data;
-	}
+	
+	
+	
+//	@DataProvider
+//	public Object[][] getData(){
+//		//TODO: creat enum for the sheet to use the ordinals
+//		String sheetName="AddCustomerTest";
+//		//int rows = excel.getRowCount(sheetName);
+//		int rows = 2;
+//		
+//		//int cols = excel.getColumnCount(sheetName);
+//		int cols = 4;
+//		
+//		System.out.println("worksheet rows/cols" + rows +"+"+cols);
+//		
+//		Object[][] data = new Object[rows-1][cols];
+//		
+//		//data[0][0] - since data is on row2... decrement by 2 to place at [0] in the array
+//		for(int rowNum=2;rowNum<=rows;rowNum++) { //2
+//			for(int colNum =0; colNum < cols; colNum++) {
+//				data[rowNum-2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
+//			}
+//		}
+//		return data;
+//	}
 }
 
 
