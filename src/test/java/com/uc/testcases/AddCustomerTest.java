@@ -34,13 +34,5 @@ public class AddCustomerTest extends TestBase {
 		alert.accept();
 		//Assert.assertTrue(false);
 	}
-
 }
 
-
-//manual assignment of the data		
-//Object[][] data = new Object[rows-1][3];
-//data[0][0] = excel.getCellData(sheetName, 0, 2);
-//data[0][1] = excel.getCellData(sheetName, 1, 2);
-//data[0][2] = excel.getCellData(sheetName, 2, 2);
-//System.out.println(data.toString());
