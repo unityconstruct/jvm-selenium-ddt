@@ -16,19 +16,12 @@ import com.uc.utilities.TestUtil;
 public class AddCustomerTest extends TestBase {
 
 	//swap out for common data provider
-	//@Test(dataProvider="getData")
-	@Test(dataProviderClass=TestUtil.class, dataProvider="dp")
+	@Test(dataProvider="getData")
+	//@Test(dataProviderClass=TestUtil.class, dataProvider="dp")
 	public void addCustomer(String firstName, String lastName, String postCode, String alerttext) throws InterruptedException {
 		//Arrange
 		
 		//Act
-//		using the TestBase class methods for interacting with objects
-//		driver.findElement(By.cssSelector(OR.getProperty("addCustBtn"))).click();
-//		driver.findElement(By.cssSelector(OR.getProperty("firstname"))).sendKeys(firstName);
-//		driver.findElement(By.cssSelector(OR.getProperty("lastname"))).sendKeys(lastName);
-//		driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(postCode);
-//		driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
-		
 		click("addCustBtn_CSS");
 		type("firstname_CSS",firstName);
 		type("lastname_CSS", lastName);
@@ -45,28 +38,28 @@ public class AddCustomerTest extends TestBase {
 	
 	
 	
-//	@DataProvider
-//	public Object[][] getData(){
-//		//TODO: creat enum for the sheet to use the ordinals
-//		String sheetName="AddCustomerTest";
-//		//int rows = excel.getRowCount(sheetName);
-//		int rows = 2;
-//		
-//		//int cols = excel.getColumnCount(sheetName);
-//		int cols = 4;
-//		
-//		System.out.println("worksheet rows/cols" + rows +"+"+cols);
-//		
-//		Object[][] data = new Object[rows-1][cols];
-//		
-//		//data[0][0] - since data is on row2... decrement by 2 to place at [0] in the array
-//		for(int rowNum=2;rowNum<=rows;rowNum++) { //2
-//			for(int colNum =0; colNum < cols; colNum++) {
-//				data[rowNum-2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
-//			}
-//		}
-//		return data;
-//	}
+	@DataProvider
+	public Object[][] getData(){
+		//TODO: creat enum for the sheet to use the ordinals
+		String sheetName="AddCustomerTest";
+		//int rows = excel.getRowCount(sheetName);
+		int rows = 2;
+		
+		//int cols = excel.getColumnCount(sheetName);
+		int cols = 4;
+		
+		System.out.println("worksheet rows/cols" + rows +"+"+cols);
+		
+		Object[][] data = new Object[rows-1][cols];
+		
+		//data[0][0] - since data is on row2... decrement by 2 to place at [0] in the array
+		for(int rowNum=2;rowNum<=rows;rowNum++) { //2
+			for(int colNum =0; colNum < cols; colNum++) {
+				data[rowNum-2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
+			}
+		}
+		return data;
+	}
 }
 
 

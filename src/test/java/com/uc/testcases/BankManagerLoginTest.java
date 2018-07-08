@@ -11,8 +11,8 @@ import com.uc.utilities.TestUtil;
 
 public class BankManagerLoginTest extends TestBase {
 
-	//@Test
-	@Test(dataProviderClass=TestUtil.class, dataProvider="dp")
+	@Test
+	//@Test(dataProviderClass=TestUtil.class, dataProvider="dp")
 	public void loginAsBankManager() throws InterruptedException {
 		//Arrange
 		log.debug("Inside Login Test");
