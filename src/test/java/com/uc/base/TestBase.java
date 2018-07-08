@@ -136,12 +136,27 @@ public class TestBase {
 	}
 	
 	public void click(String locator) {
-		driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+		
+		if(locator.endsWith("_CSS")) {
+			driver.findElement(By.cssSelector(OR.getProperty(locator))).click();
+		} else if (locator.endsWith("_XPATH")) {
+			driver.findElement(By.xpath(OR.getProperty(locator))).click();
+		} else if ( locator.endsWith("_ID")) {
+			driver.findElement(By.id(OR.getProperty(locator))).click();
+		}
+		
+		
 		test.log(LogStatus.INFO, "Clicking on " + locator);
 	}
 	
 	public void type(String locator, String value) {
-		driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+		if(locator.endsWith("_CSS")) {
+			driver.findElement(By.cssSelector(OR.getProperty(locator))).sendKeys(value);
+		} else if (locator.endsWith("_XPATH")) {
+			driver.findElement(By.xpath(OR.getProperty(locator))).sendKeys(value);
+		} else if ( locator.endsWith("_ID")) {
+			driver.findElement(By.id(OR.getProperty(locator))).sendKeys(value);
+		}
 		test.log(LogStatus.INFO, "Typing into " + locator + "as value: " + value);
 	}
 	

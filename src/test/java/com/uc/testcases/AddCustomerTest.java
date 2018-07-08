@@ -26,11 +26,11 @@ public class AddCustomerTest extends TestBase {
 //		driver.findElement(By.cssSelector(OR.getProperty("postcode"))).sendKeys(postCode);
 //		driver.findElement(By.cssSelector(OR.getProperty("addBtn"))).click();
 		
-		click("addCustBtn");
-		type("firstname",firstName);
-		type("lastname", lastName);
-		type("postcode", postCode);
-		click("addBtn");
+		click("addCustBtn_CSS");
+		type("firstname_CSS",firstName);
+		type("lastname_CSS", lastName);
+		type("postcode_CSS", postCode);
+		click("addBtn_CSS");
 		
 		//Assert
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
