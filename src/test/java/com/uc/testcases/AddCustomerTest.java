@@ -18,7 +18,7 @@ public class AddCustomerTest extends TestBase {
 	//swap out for common data provider
 	@Test(dataProvider="getData")
 	//@Test(dataProviderClass=TestUtil.class, dataProvider="dp")
-	public void addCustomer(String firstName, String lastName, String postCode, String alerttext) throws InterruptedException {
+	public void addCustomerTest(String firstName, String lastName, String postCode, String alerttext) throws InterruptedException {
 		//Arrange
 		
 		//Act
