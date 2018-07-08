@@ -1,6 +1,18 @@
-19:49:13,110 DEBUG devpinoyLogger:53 - Begin setup()
-19:49:13,773 DEBUG devpinoyLogger:75 - Config file loaded
-19:49:13,774 DEBUG devpinoyLogger:88 - Config file loaded
-19:49:16,650 DEBUG devpinoyLogger:110 - Chrome launched!
-19:49:18,676 DEBUG devpinoyLogger:120 - Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
-19:49:20,696 DEBUG devpinoyLogger:135 - Test execution completed
+22:53:41,338 DEBUG devpinoyLogger:53 - Begin setup()
+22:53:41,873 DEBUG devpinoyLogger:75 - Config file loaded
+22:53:41,873 DEBUG devpinoyLogger:88 - Config file loaded
+22:53:44,907 DEBUG devpinoyLogger:110 - Chrome launched!
+22:53:46,656 DEBUG devpinoyLogger:120 - Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
+22:53:48,092 DEBUG devpinoyLogger:19 - Inside Login Test
+22:53:48,495 DEBUG devpinoyLogger:24 - Login succesfully executed
+22:53:48,513 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+22:53:48,515 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+22:53:48,516 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+22:53:48,517 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+22:53:48,517 DEBUG cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SiloSix/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+22:53:49,547 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+22:53:49,548 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+22:53:49,548 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+22:53:49,548 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+22:53:49,550 DEBUG cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SiloSix/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+22:53:50,211 DEBUG devpinoyLogger:135 - Test execution completed
