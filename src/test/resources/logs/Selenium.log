@@ -1,18 +1,18 @@
-22:53:41,338 DEBUG devpinoyLogger:53 - Begin setup()
-22:53:41,873 DEBUG devpinoyLogger:75 - Config file loaded
-22:53:41,873 DEBUG devpinoyLogger:88 - Config file loaded
-22:53:44,907 DEBUG devpinoyLogger:110 - Chrome launched!
-22:53:46,656 DEBUG devpinoyLogger:120 - Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
-22:53:48,092 DEBUG devpinoyLogger:19 - Inside Login Test
-22:53:48,495 DEBUG devpinoyLogger:24 - Login succesfully executed
-22:53:48,513 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
-22:53:48,515 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
-22:53:48,516 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-22:53:48,517 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-22:53:48,517 DEBUG cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SiloSix/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
-22:53:49,547 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
-22:53:49,548 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
-22:53:49,548 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
-22:53:49,548 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
-22:53:49,550 DEBUG cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SiloSix/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
-22:53:50,211 DEBUG devpinoyLogger:135 - Test execution completed
+22:59:20,222 DEBUG devpinoyLogger:53 - Begin setup()
+22:59:20,733 DEBUG devpinoyLogger:73 - Config file loaded
+22:59:20,734 DEBUG devpinoyLogger:85 - Config file loaded
+22:59:23,759 DEBUG devpinoyLogger:107 - Chrome launched!
+22:59:25,856 DEBUG devpinoyLogger:117 - Navigated to: http://www.way2automation.com/angularjs-protractor/banking/#/login
+22:59:27,263 DEBUG devpinoyLogger:19 - Inside Login Test
+22:59:27,690 DEBUG devpinoyLogger:24 - Login succesfully executed
+22:59:27,709 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+22:59:27,710 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+22:59:27,711 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+22:59:27,712 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+22:59:27,712 DEBUG cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SiloSix/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+22:59:28,729 DEBUG cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+22:59:28,730 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+22:59:28,731 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+22:59:28,732 DEBUG cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+22:59:28,733 DEBUG cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/SiloSix/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+22:59:29,382 DEBUG devpinoyLogger:132 - Test execution completed
