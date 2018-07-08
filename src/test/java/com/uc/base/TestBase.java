@@ -52,7 +52,6 @@ public class TestBase {
 	public void setUp() {
 		log.debug("Begin setup()");
 		
-		
 		try {
 			excel = new ExcelReader(System.getProperty("user.dir") + "\\src\\test\\resources\\excel\\testdata.xlsx");
 		} catch (Exception e1) {
@@ -69,7 +68,6 @@ public class TestBase {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-
 			try {
 				config.load(fis);
 				log.debug("Config file loaded");
@@ -82,7 +80,6 @@ public class TestBase {
 			} catch (FileNotFoundException e) {
 				e.printStackTrace();
 			}
-
 			try {
 				OR.load(fis);
 				log.debug("Config file loaded");
@@ -145,7 +142,6 @@ public class TestBase {
 			driver.findElement(By.id(OR.getProperty(locator))).click();
 		}
 		
-		
 		test.log(LogStatus.INFO, "Clicking on " + locator);
 	}
 	
@@ -159,7 +155,6 @@ public class TestBase {
 		}
 		test.log(LogStatus.INFO, "Typing into " + locator + " as value: " + value);
 	}
-	
 	
 	public boolean isElementPresent(By by) {
 		try {
