@@ -13,26 +13,26 @@ import com.uc.utilities.TestUtil;
 
 
 
-public class AddCustomerTest extends TestBase {
+public class OpenAccountTest extends TestBase {
 
 	//swap out for common data provider
 	//@Test(dataProvider="getData")
 	@Test(dataProviderClass=TestUtil.class, dataProvider="dp2")
-	public void addCustomerTest(String firstName, String lastName, String postCode, String alerttext) throws InterruptedException {
+	public void openAccountTest(String customer, String currency) throws InterruptedException {
 		//Arrange
 		
 		//Act
 		click("addCustBtn_CSS");
-		type("firstname_CSS",firstName);
-		type("lastname_CSS", lastName);
-		type("postcode_CSS", postCode);
+		type("cusomer_CSS",customer);
+		type("currency_CSS", currency);
 		click("addBtn_CSS");
 		
 		//Assert
-		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-		Assert.assertTrue(alert.getText().contains(alerttext));
-		alert.accept();
+//		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+//		Assert.assertTrue(alert.getText().contains(alerttext));
+//		alert.accept();
 		//Assert.assertTrue(false);
 	}
 }
 
+ 

@@ -28,16 +28,43 @@ public class TestUtil extends TestBase {
 	}
 
 	
-	// TODO: Ready for Method m logic for COMMON DATA PROVIDER
+
 	@DataProvider(name="dp")
 	public static Object[][] getData(){
-		//TODO: creat enum for the sheet to use the ordinals
+		//TODO: create enum for the sheet to use the ordinals
 		String sheetName="AddCustomerTest";
 		//int rows = excel.getRowCount(sheetName);
 		int rows = 2;
 		
 		//int cols = excel.getColumnCount(sheetName);
 		int cols = 4;
+		
+		System.out.println("worksheet rows/cols" + rows +"+"+cols);
+		
+		Object[][] data = new Object[rows-1][cols];
+		
+		//data[0][0] - since data is on row2... decrement by 2 to place at [0] in the array
+		for(int rowNum=2;rowNum<=rows;rowNum++) { //2
+			for(int colNum =0; colNum < cols; colNum++) {
+				data[rowNum-2][colNum] = excel.getCellData(sheetName, colNum, rowNum);
+			}
+		}
+		return data;
+	}
+	
+	
+	// TODO: Ready for Method m logic for COMMON DATA PROVIDER
+	@DataProvider(name="dp2")
+	public static Object[][] getData2(Method m){
+		//TODO: create enum for the sheet to use the ordinals
+		
+		String sheetName = m.getName();
+		
+		int rows = excel.getRowCount(sheetName);
+		//int rows = 2;
+		
+		int cols = excel.getColumnCount(sheetName);
+		//int cols = 4;
 		
 		System.out.println("worksheet rows/cols" + rows +"+"+cols);
 		
