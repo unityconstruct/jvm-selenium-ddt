@@ -20,7 +20,8 @@ public class CustomListeners extends TestBase implements ITestListener 	{
 		test = rep.startTest(arg0.getName().toUpperCase());
 		//runmode - Y
 		if(!TestUtil.isTestRunnable(arg0.getName(), excel)) {
-			throw new SkipException("Skipping the test"+ arg0.getName().toUpperCase()+" as the Runmode is N");
+			// TestNG logging ( extentReports logging will be in the onTestSkipped() method
+			throw new SkipException("Skipping the test "+ arg0.getName().toUpperCase()+" as the Runmode is N");
 		}
 	}
  
@@ -60,9 +61,10 @@ public class CustomListeners extends TestBase implements ITestListener 	{
 	}
 
 	@Override
-	public void onTestSkipped(ITestResult result) {
-		// TODO Auto-generated method stub
-		
+	public void onTestSkipped(ITestResult arg0) {
+		test.log(LogStatus.SKIP, arg0.getName().toUpperCase() + " : Skipped the test as the Runmode is N");
+		rep.endTest(test);
+		rep.flush();
 	}
 
 	@Override
