@@ -6,6 +6,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
+import org.testng.SkipException;
 
 import com.relevantcodes.extentreports.LogStatus;
 import com.uc.base.TestBase;
@@ -17,6 +18,10 @@ public class CustomListeners extends TestBase implements ITestListener 	{
 	@Override
 	public void onTestStart(ITestResult arg0) {
 		test = rep.startTest(arg0.getName().toUpperCase());
+		//runmode - Y
+		if(!TestUtil.isTestRunnable(arg0.getName(), excel)) {
+			throw new SkipException("Skipping the test"+ arg0.getName().toUpperCase()+" as the Runmode is N");
+		}
 	}
  
 	@Override

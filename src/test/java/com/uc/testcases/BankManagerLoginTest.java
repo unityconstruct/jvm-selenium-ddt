@@ -14,7 +14,7 @@ public class BankManagerLoginTest extends TestBase {
 	
 	//@Test(dataProviderClass=TestUtil.class, dataProvider="dp")
 	@Test
-	public void loginAsBankManager() throws InterruptedException {
+	public void bankManagerLoginTest() throws InterruptedException {
 		//Arrange
 		log.debug("Inside Login Test");
 		
