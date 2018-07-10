@@ -17,6 +17,8 @@ public class BankManagerLoginTest extends TestBase {
 	public void loginAsBankManager() throws InterruptedException {
 		//Arrange
 		log.debug("Inside Login Test");
+		
+		verifyEquals("abc","zyx");
 		//Act
 		click("bmlBtn_CSS");
 		//Assert
