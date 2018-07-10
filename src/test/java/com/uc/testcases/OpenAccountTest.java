@@ -22,15 +22,16 @@ public class OpenAccountTest extends TestBase {
 		//Arrange
 		
 		//Act
-		click("addCustBtn_CSS");
-		type("cusomer_CSS",customer);
-		type("currency_CSS", currency);
-		click("addBtn_CSS");
-		
+		click("openaccount_CSS");
+		select("customer_CSS",customer); 		//try using select class  
+		select("currency_CSS",currency);		//try using select class 
+		click("process_CSS");
+		Thread.sleep(2000);
+	
 		//Assert
-//		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
-//		Assert.assertTrue(alert.getText().contains(alerttext));
-//		alert.accept();
+		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
+		//Assert.assertTrue(alert.getText().contains(alerttext));
+		alert.accept();
 		//Assert.assertTrue(false);
 	}
 }
