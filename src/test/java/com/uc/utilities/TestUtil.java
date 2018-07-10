@@ -8,6 +8,7 @@ import java.util.Date;
 import org.codehaus.plexus.util.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriverException;
 import org.testng.annotations.DataProvider;
 
 import com.uc.base.TestBase;
@@ -17,14 +18,18 @@ public class TestUtil extends TestBase {
 	public static String screenshotPath;
 	public static String screenshotName;
 	
-	public static void captureScreenshot() throws IOException {
-		//screencap & copy to report folder root
-		File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		
-		Date d = new Date();
-		
-		screenshotName = "error_" + d.toString().replace(":", "_").replace(" ", "_")+".jpg";
-		FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+"\\target\\surefire-reports\\html\\" + screenshotName));
+	public static void captureScreenshot() {
+		try {
+			//screencap & copy to report folder root
+			File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			
+			Date d = new Date();
+			
+			screenshotName = "error_" + d.toString().replace(":", "_").replace(" ", "_")+".jpg";
+			FileUtils.copyFile(srcFile, new File(System.getProperty("user.dir")+"\\target\\surefire-reports\\html\\" + screenshotName));
+		} catch (WebDriverException | IOException e) {
+			log.debug("Screenshot failed: " + e.getMessage());
+		}
 	}
 
 	
