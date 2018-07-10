@@ -27,12 +27,13 @@ public class AddCustomerTest extends TestBase {
 		type("lastname_CSS", lastName);
 		type("postcode_CSS", postCode);
 		click("addBtn_CSS");
-		
+		Thread.sleep(2000);
 		//Assert
 		Alert alert = wait.until(ExpectedConditions.alertIsPresent());
 		Assert.assertTrue(alert.getText().contains(alerttext));
 		alert.accept();
-		//Assert.assertTrue(false);
+		//Assert.fail("Customer not added successfully");
+		Thread.sleep(2000);
 	}
 }
 
