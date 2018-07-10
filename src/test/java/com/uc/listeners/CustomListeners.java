@@ -34,12 +34,8 @@ public class CustomListeners extends TestBase implements ITestListener 	{
 	public void onTestFailure(ITestResult arg0) {
 		// for hyperlinks in testng reports
 		System.setProperty("org.uncommons.reportng.escape-output","false");
-		try {
-			TestUtil.captureScreenshot();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		TestUtil.captureScreenshot();
+
 		try {
 			Thread.sleep(3000);
 		} catch (InterruptedException e) {
