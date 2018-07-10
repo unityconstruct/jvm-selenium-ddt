@@ -44,8 +44,8 @@
 				</configuration>
 			</plugin>
 
-
-			<plugin>
+<!-- Removed this duplicate entry.. keeping here until certain its not needed -->
+			<!-- plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
 				<configuration>
 					<archive>
@@ -57,7 +57,11 @@
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
 				</configuration>
-			</plugin>
+			</plugin-->
+			
+			
+			
+			<!-- Jar Creator -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
