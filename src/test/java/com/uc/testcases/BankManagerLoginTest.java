@@ -18,13 +18,17 @@ public class BankManagerLoginTest extends TestBase {
 		//Arrange
 		log.debug("Inside Login Test");
 		
-		verifyEquals("abc","zyx");
+		verifyEquals("abc","zyx"); //soft assertion
+		Thread.sleep(3000);
+		
+		
 		//Act
 		click("bmlBtn_CSS");
 		//Assert
 		Assert.assertTrue(isElementPresent(By.cssSelector(OR.getProperty("addCustBtn_CSS"))),"Login not successful");
 		log.debug("Login succesfully executed");
 		//Assert.assertTrue(false);
+		Assert.fail("Login Not Successful"); //hard assertion
 	}
 	
 
