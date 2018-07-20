@@ -1,9 +1,11 @@
 package com.uc.utilities;
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import javax.xml.soap.*;
 
-import org.w3c.dom.NodeList;
+import org.apache.xmlbeans.XmlFactoryHook;
+//import org.w3c.dom.NodeList;
 
 
 public class HttpSoapUtil {
@@ -80,15 +82,82 @@ public class HttpSoapUtil {
 
 	            soapConnection.close();
 	            
+	                      
 	            
+	            // basic getElementbyTagName logic
 	            SOAPBody sb = soapResponse.getSOAPBody();
-	            NodeList nl = sb.getElementsByTagName("ConvertCelsiusToFahernheitResult");
-	            int i = 0;
+	            SOAPBody sb2 = soapResponse.getSOAPBody();
+	            System.out.println("sb2: "+sb2);
 	            
-	            for (Node n = (Node)nl.item(i); i++<nl.getLength();) {
-					System.out.println(n.getNodeName() + ":"+   n.getValue());
-				}
+	            
+	            System.out.println("--------NodeList1------");
+	            //NodeList nl = sb.getElementsByTagName("ConvertCelsiusToFahernheitResult");
+//	            int i = 0;
+//	            for (Node n = (Node)nl.item(i); i++<nl.getLength();) {
+//					System.out.println(n.getNodeName() + ":"+   n.getValue());
+//				}
 
+	            
+	            System.out.println("--------NodeList2------");
+//	            Node nl2 = sb2.getFirstChild();
+//	            
+//	            for (Node n = (Node)nl2.item(i); i++<nl2.getLength();) {
+//					System.out.println(n.getNodeName() + ":"+   n.getValue());
+//				}	            
+	            
+	            
+	            
+	            
+	            
+	            // soap response breakdown
+	            
+	            //SoapPart
+	            System.out.println("--------Breakdown------");
+	            SOAPPart soapPart = soapResponse.getSOAPPart();
+	            SOAPEnvelope soapEnvelope = soapPart.getEnvelope();
+	            
+	            
+	            //SoapEnvelope
+	            SOAPBody soapEnvBody = soapEnvelope.getBody();
+	            SOAPHeader soapHeader = soapEnvelope.getHeader();
+	            
+	            
+	            
+	            //SOAPBody
+	            SOAPBody soapBody = soapResponse.getSOAPBody();
+	            SOAPFault soapFault = soapEnvBody.getFault();
+	            boolean soapFaultPresent = soapEnvBody.hasFault();
+
+	            Iterator iter = soapEnvBody.getChildElements();
+	            // this is clunky, need to clean up imports possibly
+	            Node resultOuter = (Node) ((org.w3c.dom.Node) iter.next()).getFirstChild();
+	            //Node nextChildElement = (Node) ((org.w3c.dom.Node) iter.next()).getChildNodes();
+	            
+	            
+	            System.out.println("soapEnvelope: "+soapEnvelope.toString());
+	            System.out.println("soapPart: "+soapPart);
+	            System.out.println("soapEnvBody: "+soapEnvBody);
+	            System.out.println("soapHeader: "+soapHeader);
+	            System.out.println("soapBody: "+soapBody);
+	            System.out.println("soapFault: "+soapFault);
+	            System.out.println("soapFaultPresent: "+soapFaultPresent);
+	            System.out.println("resultOuter: "+resultOuter);
+	            //System.out.println("nextChildElement: "+nextChildElement);
+	            System.out.println();
+	            System.out.println();
+	            System.out.println();
+	            System.out.println();
+	            System.out.println();
+	            
+	            
+            
+
+//	            SOAPElement soapElement = (SoapElement) nodeList.
+//	            
+	            
+	            
+	            
+	            
 	            
 	        } catch (Exception e) {
 	            System.err.println("\nError occurred while sending SOAP Request to Server!\nMake sure you have the correct endpoint URL and SOAPAction!\n");
