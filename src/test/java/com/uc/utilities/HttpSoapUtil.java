@@ -1,5 +1,9 @@
 package com.uc.utilities;
+import java.util.Iterator;
+
 import javax.xml.soap.*;
+
+import org.w3c.dom.NodeList;
 
 
 public class HttpSoapUtil {
@@ -25,6 +29,7 @@ public class HttpSoapUtil {
 	        //String soapAction = "http://www.webserviceX.NET/GetInfoByCity";
 
 	        callSoapWebService(soapEndpointUrl, soapAction);
+	        
 	    }
 
 	    private static void createSoapEnvelope(SOAPMessage soapMessage) throws SOAPException {
@@ -74,6 +79,17 @@ public class HttpSoapUtil {
 	            System.out.println();
 
 	            soapConnection.close();
+	            
+	            
+	            SOAPBody sb = soapResponse.getSOAPBody();
+	            NodeList nl = sb.getElementsByTagName("ConvertCelsiusToFahernheitResult");
+	            int i = 0;
+	            
+	            for (Node n = (Node)nl.item(i); i++<nl.getLength();) {
+					System.out.println(n.getNodeName() + ":"+   n.getValue());
+				}
+
+	            
 	        } catch (Exception e) {
 	            System.err.println("\nError occurred while sending SOAP Request to Server!\nMake sure you have the correct endpoint URL and SOAPAction!\n");
 	            e.printStackTrace();
